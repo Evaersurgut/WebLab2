@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Социальная сеть</title>
+		<style>
+			header{
+				display: flex;
+				background: #95B387;
+				justify-content: space-between;
+				max-width: 900px;
+				height: 75px;
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px solid black;
+			}
+			.settings {
+				border-left: 1px solid black;
+				padding: 10px;
+			}
+			main {
+				display: flex;
+				background: #bbbbbb;
+				max-width: 900px;
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px solid black;
+			}
+			nav {
+				background: #aabbaa;
+				width: 200px;
+				border-right: 1px solid black; 
+			}
+			nav p {
+				padding: 10px;
+				border-bottom: 1px solid black;
+				border-top: 1px solid black;
+				margin-top: 0;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.page {
+				background: #95B387;
+				flex-grow: 1;
+				padding: 0;
+				display: flex;
+				flex-flow: column wrap;
+				
+			}
+			.personal {
+				width: auto;
+				background: #cadfbe;
+				padding: 0;
+				justify-content: space-between;
+				margin:0;
+				display: flex;
+				border: 1px solid black;
+			}
+			.personal p{
+				padding: 10px;
+				margin-top: 0;
+				margin-bottom:0;
+				
+			}
+			.leftColumn {
+				width: 250px;
+				background: #cadfbe;
+				margin: 5px;
+				padding: 5px;
+				
+				
+			}
+			.commButton {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-top: 10px;
+			}
+			.commButton button {
+				width: 45%;
+				padding: 5px;
+				background: #eaf7e5;
+			}
+			.subInfo {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.subInfo button {
+				width: 60%;
+				padding: 5px;
+				background: #eaf7e5;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.friends {
+				background: #ffffff;
+				padding-top: 5px;
+				margin-top: 10px;
+			}
+			.friendsList {
+				
+				background: #eaf7e5;
+				
+				height: 120px;
+				
+				
+				padding:5px;
+			}
+			
+			.friendsList p{
+				height: 20%;
+				width:20%;
+				margin:0;
+				
+			}
+			.friendsListRow{
+				margin: 0;
+				padding:0;
+				display: flex ;
+				justify-content: space-between;
+			}
+			.rightColumn {
+				background: #cadfbe;
+				margin: 5px;
+				padding: 5px;
+				flex-grow: 2;
+				min-width:350px;
+			}
+			.insideContent {
+				display:flex;
+				flex-wrap: wrap;
+			}
+			.personalInfo{
+				background: #eaf7e5;
+				border: 1px solid black;
+				margin-top: 5px;
+			}
+			.photos{
+				background: #ffffff;
+				border: 1px solid black;
+				margin-top: 5px;
+				
+			}
+			.photosList{
+				display: flex;
+				justify-content: space-between;
+				background: #eaf7e5;
+				
+			}
+			.photosList p{
+				width: 30%;
+				height: 30%;
+				max-width:90px;
+				padding: 5px;
+				
+			}
+			.publications{
+				background: #ffffff;
+				border: 1px solid black;
+				margin-top: 5px;
+			}
+			.publicationsTop{
+				display: flex;
+				justify-content: space-between
+			}
+			.publicationsList{
+				background: #eaf7e5;
+			}
+			.pub{
+				display: flex;
+				padding:5px;
+				border: 1px solid black;
+			}
+			.pub>* {
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src = "https://psv4.userapi.com/c534536/u332852610/docs/d48/d7fc1bfece5b/IMG_4460.png?extra=Fuk2k8H804Kk-CTB9K1KK8KMHnKfQn8jbnlwTjFnng-AMSxG5uU2f8WrQfXSpZmRNZ45RrbTFH_oCrNUU9HNl9d230LLRN94qfVAtDlxFQyKqapYh-_eA9FuXHnAd4CjUCaysyrFp03alIEo1O5KajfY"
+			height = "100%" >
+			<div class = "settings">
+				<p>Настройки</p>
+			</div>
+		</header>
+		<main>
+			<nav>
+				<p>Профиль</p>
+				<p>Друзья</p>
+				<p>Фотографии</p>
+				<p>Видеозаписи</p>
+				<p>Аудиозаписи</p>
+				<p>Сообщения</p>
+				<p>Сообщества</p>
+				<p>Новости</p>
+			</nav>
+			<div class = "page">
+				<div class = "personal">
+					<p>Имя Фамилия</p>
+					<p>Сетевой статус</p>
+				</div>
+				<div class = "insideContent">
+					<div class = "leftColumn">
+						<img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+						width = "100%" >
+						<div class = "commButton">
+							<button>Написать сообщение</button>
+							<button>Добавть в друзья</button>
+						</div>
+						<div class = "subInfo">
+							<p align = "center">Количество подписчиков</p>
+							<button>Новости</button>
+						</div>
+						<div class = "friends">
+							<h3 style = " margin:0;">Друзья</h3>
+						
+							<div class = "friendsList">
+								<div class = "friendsListRow">
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+								</div>
+								<div class = "friendsListRow">
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+								</div>
+							</div>
+						
+
+						</div>
+						<div class = "friends">
+							<h3 style = " margin:0;">Друзья онлайн</h3>
+							<div class = "friendsList">
+								<div class = "friendsListRow">
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+								</div>
+								<div class = "friendsListRow">
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+									<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+									width = "100%"></p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class = "rightColumn">
+						<h1 align = "center" style = "background: #95B387; margin: 0;">Статус</h1>
+						<div class = "personalInfo">
+							<p>Город:</p>
+							<p>День рождения:</p>
+							<p>Семейное положение:</p>
+							<p align = "center"><a href = "">Показать подробную информацию</a></p>
+						</div>
+						<div class = "photos">
+							<h3 style = " margin:0;">Фотографии</h3>
+							<div class = "photosList">
+								<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+								width = "100%"></p>
+								<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+								width = "100%"></p>
+								<p><img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+								width = "100%"></p>
+							</div>
+						</div>
+						<div class = "publications">
+							<div class = "publicationsTop">
+								<h3 style = " margin:0;">Количество записей</h3>
+								<button style = "margin: 2px;">Поиск</button>
+							</div>
+							<div class = "publicationsList">
+								<div class="pub">
+									<div style="width:70px">
+										<img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+								width = "100%">
+									</div>
+									<div>
+										<h3>Имя фамилия</h3>
+										<p>Текст</p>
+										<img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+								width = "100%">
+									</div>
+								</div>
+								<div class="pub">
+									<div style="width:70px">
+										<img src = "https://99px.ru/sstorage/1/2011/06/image_11406111707363332889.jpg"
+								width = "100%">
+									</div>
+									<div>
+										<h3>Имя Фамилия</h3>
+										<p>Текст</p>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			
+			
+			
+		</main>
+		
+		
+		
+	</body>
+</html>
