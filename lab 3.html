@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset=utf-8">
+  <title>Калькулятор</title>
+  <style>
+	button {
+		padding: auto;
+		margin: 5px;
+		width: 40px;
+		height: 40px;
+	}
+	input {
+		padding: 20px;
+		margin: 5px;
+	}
+  </style>
+ </head>
+ <body>
+ <h1>Калькулятор</h1>
+	<input type = "text" id = "calc" value = "0">
+	<br>
+	<button id = "plus" onclick = "plus();">+</button>
+	<button id = "minus" onclick = "minus();">-</button>
+	<button id = "mult" onclick = "mult();">*</button>
+	<button id = "divd" onclick = "divd();">/</button>
+	
+	<br>
+	<button onclick = "addnum(1);">1</button>
+	<button onclick = "addnum(2);">2</button>
+	<button onclick = "addnum(3);">3</button>
+	<br>
+	<button onclick = "addnum(4);">4</button>
+	<button onclick = "addnum(5);">5</button>
+	<button onclick = "addnum(6);">6</button>
+	<br>
+	<button onclick = "addnum(7);">7</button>
+	<button onclick = "addnum(8);">8</button>
+	<button onclick = "addnum(9);">9</button>
+	<br>
+	<button onclick = "addnum(0);">0</button>
+	<button onclick = "reset();">R</button>
+	<button onclick = "backspace();">B</button>
+	<button id = "ans" onclick = "ans();">=</button>
+	
+	<script>
+		let val = 0;
+		let action = -1;
+		function addnum (num){
+			if (calc.value==="0"){calc.value=String(num);}
+			else {calc.value+=String(num);}
+			
+		}
+		function reset (){
+			val = 0;
+			action = -1;
+			calc.value = "0";
+		}
+		function backspace(){
+			if (calc.value.length == 0){return;}
+			calc.value = calc.value.substring(0, calc.value.length-1);
+			if (calc.value.length == 0){calc.value = "0";}
+		}
+		function proact (curval){
+			curval = Number(curval);
+			if (curval != curval){
+				reset();
+				alert("Error");
+				return;
+			}
+			if (action==-1){val = curval;}
+			else if (action==1){val+=curval;}
+			else if (action==2){val-=curval;}
+			else if (action==3){val*=curval;}
+			else if (action==4){val/=curval;}
+			calc.value="0";
+		}
+		function plus (){
+			proact(calc.value);
+			action=1;
+		}
+		function minus (){
+			proact(calc.value);
+			action=2;
+		}
+		function mult (){
+			proact(calc.value);
+			action=3;
+		}
+		function divd (){
+			proact(calc.value);
+			action=4;
+		}
+		function ans (){
+			proact(calc.value);
+			action=-1;
+			calc.value = String(val);
+		}
+		window.addEventListener("keydown", function (event) {
+		  if (event.defaultPrevented) {
+			return; // Do nothing if the event was already processed
+		  }
+
+		  switch (event.key) {
+			case "+":
+			  plus();
+			  break;
+			case "-":
+			  minus();
+			  break;
+			case "*":
+			  mult();
+			  break;
+			case "/":
+			  divd();
+			  break;
+			  case "=":
+			  ans();
+			  break;
+			default:
+			  return; // Quit when this doesn't handle the key event.
+		  }
+
+		  // Cancel the default action to avoid it being handled twice
+		  event.preventDefault();
+		}, true);
+	</script>
+ </body>
+</html>
